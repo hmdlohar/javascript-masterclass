@@ -1,0 +1,1 @@
+console.log("Welcome", process.argv[2])
