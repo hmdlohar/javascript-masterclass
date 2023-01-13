@@ -1,4 +1,5 @@
-let gender;
+let gender = process.argv[2];
+
 switch (gender) {
   case "male":
     console.log("You are Male");
