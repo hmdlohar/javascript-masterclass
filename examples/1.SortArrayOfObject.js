@@ -1,32 +1,53 @@
-const lstStudent = 
-[
-    {
-        name: "Hamid",
-        age: 25
+const lstStudent = [
+  {
+    name: "Hamid",
+    age: 25,
+    marks: {
+      hindi: 34,
+      english: 100,
     },
-    {
-        name: "Adie",
-        age: 20
+  },
+  {
+    name: "Adie",
+    age: 20,
+    marks: {
+      hindi: 50,
+      english: 40,
     },
-    {
-        name: "Sajiya",
-        age: 13
+  },
+  {
+    name: "Sajiya",
+    age: 13,
+    marks: {
+      hindi: 80,
+      english: 44,
     },
-    {
-        name: "Amad",
-        age: 55
-    }
-]
+  },
+  {
+    name: "Amad",
+    age: 55,
+    marks: {
+      hindi: 20,
+      english: 12,
+    },
+  },
+  {
+    name: "Sandeep",
+    age: 55,
+    marks: {
+      hindi: 41,
+      english: 12,
+    },
+  },
+];
 
-// // Sort by age
-// lstStudent.sort((a, b)=>{
-//     return b.age - a.age; // 0, +ive, -ive
-// })
+let max = lstStudent[0]
 
-lstStudent.sort((a, b) => {
-    if (b.name > a.name) return 1;
-    else if (b.name < a.name) return -1;
-    return 0;
-});
+for (let objStudent of lstStudent) {
+  objStudent.total = objStudent.marks.hindi + objStudent.marks.english;
+  if(objStudent.total > max.total){
+    max = objStudent;
+  }
+}
 
-console.table(lstStudent);
+console.log(max);
