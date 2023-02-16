@@ -1,0 +1,37 @@
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>JavaSCript Masterclass</h1>
+    <p>Here we learn JavaSCript</p>
+    <h4>Syllabus</h4>
+    <ul>
+      <li>
+        <a href="kuchbhi"> Basis of programming </a>
+      </li>
+      <li>Values</li>
+      <li>Variables</li>
+    </ul>
+    <button>Add DOM</button>
+    <button id="newButton">New Button</button>
+    <script>
+      let btn = document.querySelector("button");
+      btn.onclick = addDOM;
+
+      let newButton = document.querySelector("#newButton");
+      newButton.addEventListener("click", addDOM);
+      newButton.addEventListener("click", () => {
+        document.querySelector("h1").style.color = "red";
+      });
+
+      function addDOM() {
+        let li = document.createElement("li");
+        li.innerHTML = "DOM";
+        let ul = document.querySelector("ul");
+        ul.appendChild(li);
+        document.querySelector("button").remove();
+      }
+    </script>
+  </body>
+</html>
