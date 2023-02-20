@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+  </head>
+  <body>
+    <h1>Register yourself for Masterclass</h1>
+    <span>Enter Your Name</span>
+    <form id="frm">
+      <input name="name" type="text" required placeholder="Enter Your Name" />
+      <br />
+      <span>Enter Your Email</span>
+      <input name="email" type="text" required placeholder="email@example.com" />
+
+      <br />
+      <span>Select Your Gender</span>
+      <select name="gender">
+        <option value="1">Male</option>
+        <option value="2">Female</option>
+      </select>
+      <br />
+      <span>Do you know english?</span>
+      <input name="english" type="checkbox" />
+
+      <br />
+      <span>Which language do you choose?</span>
+      <input required type="radio" name="language" value="JS" /> JavaSCript
+      <input required type="radio" name="language" value="PHP" /> PHP
+      <input required type="radio" name="language" value="JAVA" /> Java
+      <br />
+      <span>Tell me about yourself</span>
+      <textarea name="detail"></textarea>
+      <button type="submit">Save</button>
+    </form>
+  </body>
+  <script src="4.js"></script>
+</html>
