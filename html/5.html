@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Students</title>
+    <link rel="stylesheet" href="./5.css" />
+  </head>
+  <body>
+    <div id="loading">Loading...</div>
+    <table id="customers" style="display: none">
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Marks</th>
+        </tr>
+      </thead>
+      <tbody id="list"></tbody>
+    </table>
+    <br />
+    <button
+      onclick="document.querySelector('#addForm').style.display = 'block'"
+    >
+      Add Student
+    </button>
+    <br />
+    <form onsubmit="onFormSubmit(event)">
+      <table
+        id="addForm"
+        style="border: 1px solid blue; width: 100%; display: none"
+      >
+        <tbody>
+          <tr>
+            <td>First Name</td>
+            <td>
+              <input type="text" name="firstName" />
+            </td>
+          </tr>
+          <tr>
+            <td>Last Name</td>
+            <td>
+              <input type="text" name="lastName" />
+            </td>
+          </tr>
+
+          <tr>
+            <td>Email</td>
+            <td>
+              <input type="text" name="email" />
+            </td>
+          </tr>
+          <tr>
+            <td>Marks</td>
+            <td>
+              <input type="number" name="marks" />
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+              <div id="error" style="display: none; color: red"></div>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+              <div id="loadingAdd" style="display: none">Loading...</div>
+              <input type="submit" id="submit" value="Add student" />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+  </body>
+  <script src="./5.js"></script>
+</html>
