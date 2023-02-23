@@ -16,13 +16,14 @@
           <th>Last Name</th>
           <th>Email</th>
           <th>Marks</th>
+          <th>Actions</th>
         </tr>
       </thead>
       <tbody id="list"></tbody>
     </table>
     <br />
     <button
-      onclick="document.querySelector('#addForm').style.display = 'block'"
+      onclick="onAddClick()"
     >
       Add Student
     </button>
@@ -60,9 +61,7 @@
           </tr>
           <tr>
             <td></td>
-            <td>
-              <div id="error" style="display: none; color: red"></div>
-            </td>
+            <td></td>
           </tr>
           <tr>
             <td></td>
@@ -74,6 +73,7 @@
         </tbody>
       </table>
     </form>
+    <div id="error" style="display: none; color: red"></div>
   </body>
   <script src="./5.js"></script>
 </html>
